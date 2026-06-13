@@ -1,12 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "vercel.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "." }
-    }
-  ],
   "redirects": [
     {
       "source": "/",
