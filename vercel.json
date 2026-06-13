@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'Redirect only, no build needed'",
+  "outputDirectory": ".",
   "redirects": [
     {
       "source": "/",
