@@ -1,0 +1,25 @@
+version: '1'
+
+layers:
+  - name: ui
+    patterns:
+      - 'src/ui/**'
+  - name: db
+    patterns:
+      - 'src/db/**'
+
+rules:
+  - id: ui-cannot-import-db
+    type: layer_breach
+    enabled: true
+    severity: error
+    config:
+      allowedDirections:
+        - 'db -> ui'
+
+settings:
+  failOn: error
+  maxViolationsPerRule: 100
+  ignorePatterns:
+    - 'node_modules/**'
+    - 'dist/**'
